@@ -19,7 +19,7 @@ class PostList extends Component{
         })
         .catch(error => {
             console.log(error)
-            this.setState({errorMsg : 'Error retreving data'})
+            this.setState({errorMsg :  'Error retreving data'})
         })
     }
     render(){
