@@ -25,7 +25,7 @@ class PostList extends Component{
     render(){
         const { posts, errorMsg } = this.state
         return(
-            <div>
+            <div>  
                 List of Posts
                 {
                     posts.length?
