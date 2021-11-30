@@ -10,7 +10,7 @@ class PostList extends Component{
             errorMsg: ''
         }
     }
-    componentDidMount() {
+    componentDidMount() {      
         // axios.get('https://jsonplaceholder.typicode.com/posts')
         axios.get('https://jsonplaceholder.typicode.com/posts1')
         .then(response => {
