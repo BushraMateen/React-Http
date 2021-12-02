@@ -6,13 +6,15 @@ import HookCounter2 from './Components/HookCounter2';
 import HookCounter3 from './Components/HookCounter3';
 import HookCounter4 from './Components/HookCounter4';
 import HookCounterOne from './Components/HookCounterone';
+import HookMouse from './Components/HookMouse';
 import PostForm from './Components/PostForm';
 import PostList from './Components/PostList';
 
 function App() {
   return (
     <div className="App">
-      <HookCounterOne />
+      <HookMouse />
+      {/* <HookCounterOne /> */}
       {/* <HookCounter4 /> */}
       {/* <HookCounter3 /> */}
       {/* <HookCounter2 /> */}
