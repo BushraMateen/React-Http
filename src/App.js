@@ -1,6 +1,9 @@
 
+
+import React from 'react';
 import './App.css';
 import ClassCounter from './Components/ClassCounter';
+import ComponentC from './Components/ComponentC';
 import DataFetching from './Components/DataFetching';
 import HookCounter from './Components/HookCounter';
 import HookCounter2 from './Components/HookCounter2';
@@ -13,10 +16,20 @@ import MouseContainer from './Components/MouseContainer';
 import PostForm from './Components/PostForm';
 import PostList from './Components/PostList';
 
+
+
+export const UserContext  = React.createContext()
+export const ChannelContext = React.createContext()
+
 function App() {
   return (
     <div className="App">
-      <DataFetching />
+      <UserContext.Provider value={'Bushra'}>
+        <ChannelContext.Provider value = {'Mateen'}>
+          <ComponentC />
+        </ChannelContext.Provider>
+      </UserContext.Provider>
+      {/* <DataFetching /> */}
       {/* <IntervalHookCounter /> */}
       {/* <MouseContainer /> */}
       {/* <HookMouse /> */}
