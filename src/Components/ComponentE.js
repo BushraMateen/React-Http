@@ -8,7 +8,7 @@ function ComponentE() {
     const channel = useContext(ChannelContext)
     return (
         <div>
-            {user} - {channel}
+            {user} - {channel} 
         </div>
     )
 }
