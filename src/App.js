@@ -1,6 +1,6 @@
 
 
-import React,{useReducer} from 'react';
+ import React from 'react';
 import './App.css';
 import ClassCounter from './Components/ClassCounter';
 import ComponentC from './Components/ComponentC';
@@ -21,36 +21,38 @@ import ConterTwo from './Components/ConterTwo';
 import ComponentA from './Components/ComponentA';
 import ComponentB from './Components/ComponentB';
 import ComponentC1 from './Components/ComponentC1';
+import DataFetching1 from './Components/DataFetching1'
 
 
- export const UserContext  = React.createContext()
- export const ChannelContext = React.createContext()
+  export const UserContext  = React.createContext()
+  export const ChannelContext = React.createContext()
 
-export const CountContext = React.createContext()
+ export const CountContext = React.createContext()
 
-const initialState = 0
-const reducer = (state, action) => {
-    switch(action){
-        case 'increment':
-            return state + 1
-        case 'decrement':
-            return state - 1
-         case 'reset':
-            return initialState
-        default :
-        return state
-    }
-}
+// const initialState = 0
+// const reducer = (state, action) => {
+//     switch(action){
+//         case 'increment':
+//             return state + 1
+//         case 'decrement':
+//             return state - 1
+//          case 'reset':
+//             return initialState
+//         default :
+//         return state
+//     }
+// }
 function App() {
-  const [count,dispatch] = useReducer(reducer,initialState)
+  // const [count,dispatch] = useReducer(reducer,initialState)
   return (
-    <CountContext.Provider 
-        value = {{ countState:count, countDispatch: dispatch}} >
+    // <CountContext.Provider 
+    //     value = {{ countState:count, countDispatch: dispatch}} >
       <div className="App">
-      Count - {count}
+        <DataFetching1 />
+      {/* Count - {count}
       <ComponentA />
       <ComponentB />
-      <ComponentC1 />
+      <ComponentC1 /> */}
       {/* <ConterTwo /> */}
       {/* <ConterOne /> */}
       {/* <UserContext.Provider value={'Bushra'}>
@@ -71,8 +73,9 @@ function App() {
       {/* <PostForm /> */}
       {/* <PostList /> */}
       </div>
-    </CountContext.Provider>
-  );
+  //   {/* </CountContext.Provider> */}
+  // );
+  )
 }
 
 export default App;
